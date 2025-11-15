@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skal Ventures",
-  description: "Investment strategies that outperform the market",
-    generator: 'v0.app'
+  title: "Synapse - AI-Powered Talent Hiring Platform",
+  description: "AI-powered platform that finds, evaluates, and matches top talent with your company",
+  generator: "v0.app",
 };
 
 export default function RootLayout({
@@ -22,10 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistMono.variable} antialiased`}
-        suppressHydrationWarning
-      >
+      <body className={`${geistMono.variable} antialiased`} suppressHydrationWarning>
         <Header />
         {children}
       </body>
