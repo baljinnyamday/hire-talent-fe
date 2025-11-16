@@ -1,4 +1,4 @@
-export interface WorkflowNodeData extends Record<string, unknown> {
+export interface WorkflowNodeData {
   label: string;
   type: "input" | "analysis" | "decision" | "conditional" | "parallel";
   status: "pending" | "processing" | "completed" | "failed";
