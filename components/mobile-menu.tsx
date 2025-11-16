@@ -18,6 +18,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
     { name: "Testimonials", href: "#testimonials" },
     { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
+    { name: "Workflows", href: "/workflows" },
   ];
 
   const handleLinkClick = () => {
@@ -28,10 +29,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
     <Dialog.Root modal={false} open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
         <button
-          className={cn(
-            "group lg:hidden p-2 text-foreground transition-colors",
-            className
-          )}
+          className={cn("group lg:hidden p-2 text-foreground transition-colors", className)}
           aria-label="Open menu"
         >
           <Menu className="group-[[data-state=open]]:hidden" size={24} />
@@ -40,17 +38,11 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
       </Dialog.Trigger>
 
       <Dialog.Portal>
-        <div
-          data-overlay="true"
-          className="fixed z-30 inset-0 bg-black/50 backdrop-blur-sm"
-        />
+        <div data-overlay="true" className="fixed z-30 inset-0 bg-black/50 backdrop-blur-sm" />
 
         <Dialog.Content
           onInteractOutside={(e) => {
-            if (
-              e.target instanceof HTMLElement &&
-              e.target.dataset.overlay !== "true"
-            ) {
+            if (e.target instanceof HTMLElement && e.target.dataset.overlay !== "true") {
               e.preventDefault();
             }
           }}
@@ -71,13 +63,13 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
             ))}
 
             <div className="mt-6">
-              <Link
-                href="/demo"
+              <a
+                href="/workflows"
                 onClick={handleLinkClick}
                 className="inline-block text-xl font-mono uppercase text-primary transition-colors ease-out duration-150 hover:text-primary/80 py-2"
               >
-                Get Demo
-              </Link>
+                Your workflows
+              </a>
             </div>
           </nav>
         </Dialog.Content>

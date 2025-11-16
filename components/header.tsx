@@ -21,13 +21,19 @@ export const Header = () => {
               {item}
             </Link>
           ))}
+          <Link
+            className="uppercase inline-block font-mono text-foreground/60 hover:text-foreground/100 duration-150 transition-colors ease-out"
+            href="/workflows"
+          >
+            Workflows
+          </Link>
         </nav>
-        <Link
+        <a
           className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-primary hover:text-primary/80"
-          href="/demo"
+          href="/workflows"
         >
-          Get Demo
-        </Link>
+          Your workflows
+        </a>
         <MobileMenu />
       </header>
     </div>
