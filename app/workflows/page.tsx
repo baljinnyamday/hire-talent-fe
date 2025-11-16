@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { candidateWorkflows } from '@/lib/workflow-data';
+import { getAllCandidates } from '@/lib/workflow-data';
 import { ArrowRight, CheckCircle2, Clock, XCircle, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -29,6 +29,8 @@ const statusConfig = {
 };
 
 export default function WorkflowsPage() {
+  const candidateWorkflows = getAllCandidates();
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
